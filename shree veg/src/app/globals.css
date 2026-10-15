@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* PALETTE (Krishna Indigo and Marigold) Light Mode */
+  --color-primary: #1B2559;
+  --color-accent: #F2A900;
+  --color-accent-ink: #1B2559;
+  --color-sand: #FAF4E8;
+  --color-surface: #FFFFFF;
+  --color-ink: #1B2559;
+  --color-text: #1B2559;
+  --color-muted: #5B6285;
+  --color-success: #2E7D5B;
+  --color-alert: #C8382E;
+  --color-line: #E6DCC6;
+
+  /* Temple heritage complementary accents */
+  --color-brass: #C59B27;
+  --color-haldi: #F59E0B;
+  --color-surface-hover: #F7EFE1;
+
+  /* Font variables fallback */
+  --font-yatra: 'Yatra One', Georgia, serif;
+  --font-mukta: 'Mukta', system-ui, -apple-system, sans-serif;
+}
+
+/* Dark Mode: prefers-color-scheme media query as requested */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #232E6E;
+    --color-accent: #F2A900;
+    --color-accent-ink: #1B2559;
+    --color-sand: #0F1330;
+    --color-surface: #1A2048;
+    --color-ink: #F4EFE2;
+    --color-text: #F4EFE2;
+    --color-muted: #A8AFD4;
+    --color-success: #5CCB93;
+    --color-alert: #F08A8A;
+    --color-line: #2C3559;
+    --color-brass: #E2BC50;
+    --color-haldi: #FBBF24;
+    --color-surface-hover: #222B5C;
+  }
+}
+
+/* Class-based Dark Mode support for manual triggers */
+.dark, [data-theme='dark'] {
+  --color-primary: #232E6E;
+  --color-accent: #F2A900;
+  --color-accent-ink: #1B2559;
+  --color-sand: #0F1330;
+  --color-surface: #1A2048;
+  --color-ink: #F4EFE2;
+  --color-text: #F4EFE2;
+  --color-muted: #A8AFD4;
+  --color-success: #5CCB93;
+  --color-alert: #F08A8A;
+  --color-line: #2C3559;
+  --color-brass: #E2BC50;
+  --color-haldi: #FBBF24;
+  --color-surface-hover: #222B5C;
+}
+
+@layer base {
+  body {
+    color: var(--color-ink);
+    background-color: var(--color-sand);
+    font-family: var(--font-mukta), 'Mukta', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Headings default font */
+  h1, h2, .font-heading {
+    font-family: var(--font-yatra), 'Yatra One', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Subtle Paisley (Ambi / Kalka) Pattern at under 8% opacity (Zero external HTTP requests) */
+.bg-paisley-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 12 C44 6, 54 10, 53 22 C52 32, 38 42, 36 50 C34 42, 20 32, 19 22 C18 10, 28 6, 36 12 Z M36 20 C40 16, 47 18, 46 26 C45 32, 38 38, 36 43 C34 38, 27 32, 26 26 C25 18, 32 16, 36 20 Z' fill='%231B2559' fill-opacity='0.045' fill-rule='evenodd'/%3E%3Ccircle cx='36' cy='28' r='3' fill='%23C59B27' fill-opacity='0.05'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+.dark .bg-paisley-pattern, [data-theme='dark'] .bg-paisley-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 12 C44 6, 54 10, 53 22 C52 32, 38 42, 36 50 C34 42, 20 32, 19 22 C18 10, 28 6, 36 12 Z M36 20 C40 16, 47 18, 46 26 C45 32, 38 38, 36 43 C34 38, 27 32, 26 26 C25 18, 32 16, 36 20 Z' fill='%23F2A900' fill-opacity='0.035' fill-rule='evenodd'/%3E%3Ccircle cx='36' cy='28' r='3' fill='%23E2BC50' fill-opacity='0.04'/%3E%3C/svg%3E");
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) .bg-paisley-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 12 C44 6, 54 10, 53 22 C52 32, 38 42, 36 50 C34 42, 20 32, 19 22 C18 10, 28 6, 36 12 Z M36 20 C40 16, 47 18, 46 26 C45 32, 38 38, 36 43 C34 38, 27 32, 26 26 C25 18, 32 16, 36 20 Z' fill='%23F2A900' fill-opacity='0.035' fill-rule='evenodd'/%3E%3Ccircle cx='36' cy='28' r='3' fill='%23E2BC50' fill-opacity='0.04'/%3E%3C/svg%3E");
+  }
+}
+
+/* Temple Arch Shapes */
+.temple-arch-top {
+  border-top-left-radius: 2.25rem;
+  border-top-right-radius: 2.25rem;
+}
+
+.temple-arch-hero {
+  border-top-left-radius: 3.5rem;
+  border-top-right-radius: 3.5rem;
+}
+
+.temple-card {
+  border: 1.5px solid var(--color-line);
+  box-shadow: 0 4px 20px -2px rgba(27, 37, 89, 0.06), 0 2px 6px -1px rgba(197, 155, 39, 0.08);
+}
+
+.temple-border-brass {
+  border: 1.5px solid rgba(197, 155, 39, 0.45);
+}
+
+.brass-glow {
+  box-shadow: 0 0 16px -2px rgba(197, 155, 39, 0.28);
+}
+
+/* CRITICAL RULE: Text on accent / marigold is always #1B2559, never white */
+.text-on-marigold,
+.bg-accent,
+.bg-marigold {
+  color: #1B2559 !important;
+}
+
+/* Accessible Tap Target: Minimum 44px */
+.tap-target {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Visible Keyboard Focus */
+*:focus-visible {
+  outline: 2px solid #F2A900 !important;
+  outline-offset: 2px !important;
+}
+
+/* Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Scrollbar Hide Utility for horizontal date chips */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

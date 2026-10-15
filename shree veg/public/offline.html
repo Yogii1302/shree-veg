@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>इंटरनेट डिस्कनेक्ट | श्री प्युअर व्हेज स्टाफ</title>
+  <meta name="theme-color" content="#ea580c">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #090d16;
+      color: #f1f5f9;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .card {
+      background: #131b2e;
+      border: 1px solid #1e293b;
+      border-radius: 1.25rem;
+      max-width: 440px;
+      width: 100%;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+    .icon-box {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 1.25rem;
+      background: rgba(234, 88, 12, 0.15);
+      border: 1px solid rgba(234, 88, 12, 0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+    .sub {
+      color: #ea580c;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: #94a3b8;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: 0.75rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background: #ea580c;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+    }
+    .btn-primary:hover { background: #c2410c; }
+    .btn-secondary {
+      background: #1e293b;
+      color: #cbd5e1;
+      border: 1px solid #334155;
+    }
+    .btn-secondary:hover { background: #334155; }
+    .footer-info {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid #1e293b;
+      font-size: 0.75rem;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon-box">📡</div>
+    <h1>इंटरनेट कनेक्शन बंद आहे</h1>
+    <div class="sub">You are currently offline</div>
+    <p>
+      पुणे-सोलापूर महामार्गावर 4G रेंज कमी असू शकते. श्री प्युअर व्हेज स्टाफ अॅप नेटवर्क परत आल्यावर आपोआप सिंक होईल.
+      <br><br>
+      <em>Check mobile data / Wi-Fi connection to sync bookings.</em>
+    </p>
+
+    <button class="btn btn-primary" onclick="window.location.reload()">
+      🔄 पुन्हा प्रयत्न करा (Retry)
+    </button>
+
+    <a href="tel:+919876543210" class="btn btn-secondary">
+      📞 हॉटेल कॉल करा (+91 98765 43210)
+    </a>
+
+    <div class="footer-info">
+      श्री प्युअर व्हेज — थेऊर फाटा, कुंजीरवाडी, हवेली, पुणे ४१२२०१
+    </div>
+  </div>
+</body>
+</html>

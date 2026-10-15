@@ -1,0 +1,54 @@
+{
+  "id": "/admin",
+  "name": "श्री प्युअर व्हेज - कर्मचारी पोर्टल",
+  "short_name": "श्री व्हेज स्टाफ",
+  "description": "Live Realtime Bookings Inbox, Kitchen KDS & Staff Portal for Shree Pure Veg (Theur Phata, Pune)",
+  "start_url": "/admin",
+  "scope": "/admin",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0f172a",
+  "theme_color": "#ea580c",
+  "lang": "mr",
+  "categories": ["business", "food", "productivity"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "प्रलंबित आरक्षण (Pending Bookings)",
+      "short_name": "प्रलंबित (Pending)",
+      "url": "/admin?filter=pending",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "आजचे आरक्षण (Today Bookings)",
+      "short_name": "आजचे (Today)",
+      "url": "/admin?filter=today",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
